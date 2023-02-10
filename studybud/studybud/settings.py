@@ -40,8 +40,12 @@ INSTALLED_APPS = [
 
     'base.apps.BaseConfig',
 
-    'rest_framework',
+    'rest_framework',  # let us use api
+
+#  'corsheaders',  # cors lets us share api with unbunded service + corsheaders.middleware.CorsMiddleware in MIDDLEWERE
 ]
+
+AUTH_USER_MODEL = 'base.User'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -51,6 +55,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+
+    #'corsheaders.middleware.CorsMiddleware'
 ]
 
 ROOT_URLCONF = 'studybud.urls'
@@ -122,10 +128,13 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = 'static/'
+MEDIA_URL = '/images/'
 
 STATICFILES_DIRS = [
     BASE_DIR / 'static'
 ]
+
+MEDIA_ROOT = BASE_DIR / 'static/images'
 
 # STATIC_ROOT =
 
