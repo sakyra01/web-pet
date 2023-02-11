@@ -7,14 +7,6 @@ from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
 
-# Create your views here.
-
-
-# rooms = [
-#     {'id':1, 'name':'Lets learn python!'},
-#     {'id':2, 'name':'Design with me'},
-#     {'id':3, 'name':'Frontend developers'},
-# ]
 
 def loginPage(request):
     page = 'login'
@@ -61,7 +53,7 @@ def registerPage(request):
     return render(request, 'base/login_register.html', {'form': form})
 
 
-#@login_required(login_url='login')  # you need to be loggin to be able see content
+@login_required(login_url='login')  # you need to be loggin to be able see content
 def home(request):
     q = request.GET.get('q') if request.GET.get('q') != None else ''
 

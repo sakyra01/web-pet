@@ -9,7 +9,6 @@ class MyUserCreationForm(UserCreationForm):
         fields = ['name', 'username', 'email', 'password1', 'password2']
 
 
-
 class RoomForm(ModelForm):
     class Meta:
         model = Room

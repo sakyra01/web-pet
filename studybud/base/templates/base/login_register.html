@@ -11,21 +11,19 @@
             </div>
           </div>
           <div class="layout__body">
-            <h2 class="auth__tagline">Find your study partner</h2>
+            <h2 class="auth__tagline">SecTwitt</h2>
 
             <form class="form" action="" method="POST">
               {% csrf_token %}
               <div class="form__group form__group">
-                <label for="room_name">Email</label>
-                <input id="username" name="email" type="text" placeholder="" />
+                <input id="username" name="email" type="text" placeholder="Login" />
               </div>
               <div class="form__group">
-                <label for="password">Password</label>
                 <input
                   id="password"
                   name="password"
                   type="password"
-                  placeholder=""
+                  placeholder="Password"
                 />
               </div>
 
@@ -66,7 +64,7 @@
             </div>
           </div>
           <div class="layout__body">
-            <h2 class="auth__tagline">Find your study partner</h2>
+            <h2 class="auth__tagline">SecTwitt</h2>
 
             <form class="form" action="" method="POST">
               {% csrf_token %}
@@ -101,8 +99,8 @@
             </form>
 
             <div class="auth__action">
-              <p>Already signed up yet?</p>
-              <a href="{% url 'login' %}" class="btn btn--link">Sign Up</a>
+              <p>Already signed in yet?</p>
+              <a href="{% url 'login' %}" class="btn btn--link">Sign In</a>
             </div>
           </div>
         </div>
